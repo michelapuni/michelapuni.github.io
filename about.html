@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -10,4 +10,55 @@
     </div>
     
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="container">
+            <div class="left">
+                <div class="link-wrapper"> 
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="link-wrapper">
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+
+            <div class="portfolio-content">
+                <div class="portfolio-wrapper">
+
+                    <div class="portfolio-individual-wrapper">
+                        <div class="portfolio-img-bckg" style="background-image:url(Michela.jpg)"></div>
+                        <div class="img-text-wrapper">
+                            <div class="subtitle">
+                               A website I built using HTML, CSS, and JavaScript that utilizes a weather API in order to give me a suggestion on the type of clothing I should pick out for the day.
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+    </div>
+ 
+</body>
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-individual-wrapper');
+
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', () => {
+            portfolioItem.childNodes[1].classList.add('img-darken');
+        })
+
+        portfolioItem.addEventListener('mouseout', () => {
+            portfolioItem.childNodes[1].classList.remove('img-darken');
+        })
+    })
+</script>
 </html>
